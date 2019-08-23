@@ -3,16 +3,23 @@
 
 
 #include <iostream>
+#include <thread>
 #include "sessionsManager.h"
 
 int main()
 {
 
+	using namespace std::chrono_literals;
+
 	Aws::SDKOptions options;
 	Aws::InitAPI(options);
 	{
 		Session *sess = new Session();
-		sess->addIp();
+		while(true) 
+		{
+			sess->addIp();
+			std::this_thread::sleep_for(3600s);
+		}
 	}
 	Aws::ShutdownAPI(options);
 }

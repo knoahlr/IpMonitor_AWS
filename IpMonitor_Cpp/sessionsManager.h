@@ -15,11 +15,6 @@
 #include <aws/dynamodb/model/ScanRequest.h>
 #include <aws/dynamodb/model/ScanResult.h>
 
-#include <QtWidgets/QMainWindow>
-#include <QtGui>
-#include <QtWidgets>
-#include <QHBoxLayout>
-
 #include <iostream>
 #include <chrono>
 
